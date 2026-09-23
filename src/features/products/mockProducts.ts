@@ -1,0 +1,120 @@
+import type { Product } from "../../types/product";
+
+export const mockProducts: Product[] = [
+  {
+    _id: "1",
+    title: "Nike Air Max Running Shoes",
+    description:
+      "Nike Air Max running shoes in excellent condition. Comfortable for everyday wear and running.",
+    price: 3499,
+    category: "Fashion",
+    condition: "Like New",
+    images: [
+      "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800",
+    ],
+    seller: {
+      _id: "seller-1",
+      name: "Aarav",
+      rating: 4.8,
+      totalRatings: 124,
+      itemsSold: 124,
+      responseRate: 98,
+    },
+    location: "Mumbai",
+    brand: "Nike",
+    size: "UK 9",
+    color: "Red",
+    views: 245,
+    likes: 24,
+    isSold: false,
+    createdAt: "2026-09-01T10:00:00.000Z",
+    updatedAt: "2026-09-01T10:00:00.000Z",
+  },
+
+  {
+    _id: "2",
+    title: "Sony WH-1000XM5 Headphones",
+    description:
+      "Sony WH-1000XM5 wireless noise cancelling headphones. Excellent condition with premium sound quality.",
+    price: 18999,
+    category: "Electronics",
+    condition: "Like New",
+    images: [
+      "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=800",
+    ],
+    seller: {
+      _id: "seller-2",
+      name: "Riya",
+      rating: 4.9,
+      totalRatings: 86,
+      itemsSold: 86,
+      responseRate: 99,
+    },
+    location: "Pune",
+    brand: "Sony",
+    color: "Black",
+    views: 412,
+    likes: 41,
+    isSold: false,
+    createdAt: "2026-09-01T11:00:00.000Z",
+    updatedAt: "2026-09-01T11:00:00.000Z",
+  },
+
+  {
+    _id: "3",
+    title: "Minimal Wooden Study Desk",
+    description:
+      "Minimal wooden study desk suitable for home offices, students, and compact workspaces.",
+    price: 4500,
+    category: "Home",
+    condition: "Good",
+    images: [
+      "https://images.unsplash.com/photo-1518455027359-f3f8164ba6b7?w=800",
+    ],
+    seller: {
+      _id: "seller-3",
+      name: "Kabir",
+      rating: 4.7,
+      totalRatings: 53,
+      itemsSold: 53,
+      responseRate: 95,
+    },
+    location: "Thane",
+    brand: "IKEA",
+    color: "Brown",
+    views: 187,
+    likes: 18,
+    isSold: false,
+    createdAt: "2026-09-01T12:00:00.000Z",
+    updatedAt: "2026-09-01T12:00:00.000Z",
+  },
+
+  {
+    _id: "4",
+    title: "Canon EOS 200D Camera",
+    description:
+      "Canon EOS 200D DSLR camera in good condition. Suitable for photography, content creation, and beginners.",
+    price: 28500,
+    category: "Electronics",
+    condition: "Good",
+    images: [
+      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800",
+    ],
+    seller: {
+      _id: "seller-4",
+      name: "Meera",
+      rating: 4.9,
+      totalRatings: 201,
+      itemsSold: 201,
+      responseRate: 97,
+    },
+    location: "Mumbai",
+    brand: "Canon",
+    color: "Black",
+    views: 563,
+    likes: 67,
+    isSold: false,
+    createdAt: "2026-09-01T13:00:00.000Z",
+    updatedAt: "2026-09-01T13:00:00.000Z",
+  },
+];

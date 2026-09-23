@@ -1,0 +1,614 @@
+/* =========================================================
+   RELOOP — SELL PAGE
+   ========================================================= */
+
+.listing-studio {
+  width: min(1080px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.studio-header {
+  margin-bottom: 32px;
+}
+
+.studio-header .section-eyebrow {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8a8f98;
+}
+
+.studio-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #111827;
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.studio-header h1 svg {
+  flex-shrink: 0;
+}
+
+.studio-header p {
+  margin: 10px 0 0;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.studio-progress {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.progress-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  color: #a0a4ac;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.progress-step span {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #f1f2f4;
+  color: #777c84;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.progress-step.active {
+  color: #111827;
+}
+
+.progress-step.active span {
+  background: #111827;
+  color: #fff;
+}
+
+.progress-line {
+  flex: 1;
+  height: 1px;
+  margin: 0 14px;
+  background: #e5e7eb;
+}
+
+/* =========================================================
+   PHOTO UPLOAD
+   ========================================================= */
+
+.studio-upload {
+  margin-bottom: 28px;
+}
+
+.image-uploader {
+  width: 100%;
+}
+
+.drop-zone {
+  min-height: 220px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  border: 2px dashed #d9dce2;
+  border-radius: 18px;
+
+  background: #fafafa;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.drop-zone:hover {
+  border-color: #aeb3bb;
+  background: #f7f7f8;
+}
+
+.drop-zone-active {
+  border-color: #111827;
+  background: #f3f4f6;
+}
+
+.upload-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 14px;
+
+  border-radius: 14px;
+  background: #111827;
+  color: #fff;
+}
+
+.drop-zone strong {
+  color: #111827;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.drop-zone p {
+  margin: 6px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.drop-zone > span {
+  margin-top: 4px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.upload-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  margin-top: 10px;
+
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+/* Uploaded images */
+
+.uploaded-images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.uploaded-image {
+  position: relative;
+
+  aspect-ratio: 1;
+  overflow: hidden;
+
+  border-radius: 14px;
+  background: #f3f4f6;
+}
+
+.uploaded-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.uploaded-image button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(17, 24, 39, 0.88);
+  color: #fff;
+
+  cursor: pointer;
+}
+
+.uploaded-image button:hover {
+  transform: scale(1.06);
+}
+
+/* =========================================================
+   LISTING FORM
+   ========================================================= */
+
+.listing-form {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 32px;
+  margin-bottom: 30px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 8px 30px rgba(17, 24, 39, 0.04);
+}
+
+/* Each field */
+
+.listing-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 20px;
+}
+
+.listing-form .form-group label {
+  color: #374151;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   INPUTS
+   ========================================================= */
+
+.listing-form input,
+.listing-form textarea,
+.listing-form select {
+  width: 100%;
+  box-sizing: border-box;
+
+  border: 1px solid #d9dce2;
+  border-radius: 11px;
+
+  background: #fff;
+  color: #111827;
+
+  font-family: inherit;
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.listing-form input,
+.listing-form select {
+  height: 48px;
+  padding: 0 14px;
+}
+
+.listing-form textarea {
+  min-height: 130px;
+  padding: 14px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.listing-form input::placeholder,
+.listing-form textarea::placeholder {
+  color: #a3a7af;
+}
+
+.listing-form input:hover,
+.listing-form textarea:hover,
+.listing-form select:hover {
+  border-color: #bfc3ca;
+}
+
+.listing-form input:focus,
+.listing-form textarea:focus,
+.listing-form select:focus {
+  border-color: #111827;
+
+  box-shadow:
+    0 0 0 3px rgba(17, 24, 39, 0.07);
+}
+
+/* Select */
+
+.listing-form select {
+  cursor: pointer;
+}
+
+/* =========================================================
+   FORM ROWS
+   ========================================================= */
+
+.listing-form .form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+/*
+   Your last row contains:
+   Brand | Size | Color
+
+   Make it 3 equal columns.
+*/
+
+.listing-form .form-row:nth-of-type(3) {
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+}
+
+/* =========================================================
+   PUBLISH BUTTON
+   ========================================================= */
+
+.listing-form .button-primary {
+  width: 100%;
+  min-height: 52px;
+
+  margin-top: 4px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #111827;
+  color: #fff;
+
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.listing-form .button-primary:hover {
+  background: #1f2937;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 20px rgba(17, 24, 39, 0.16);
+}
+
+.listing-form .button-primary:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   AI LISTING STUDIO
+   ========================================================= */
+
+.ai-preview {
+  padding: 28px;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  background: #fff;
+
+  box-shadow:
+    0 8px 30px rgba(17, 24, 39, 0.04);
+}
+
+.ai-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.ai-preview-header > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.ai-preview-header svg {
+  color: #111827;
+}
+
+.ai-preview-header strong {
+  color: #111827;
+  font-size: 16px;
+}
+
+.ai-preview-header > span {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.ai-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+
+  margin-top: 24px;
+}
+
+.ai-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ai-field label {
+  color: #8a8f98;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ai-field > div {
+  min-height: 48px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 14px;
+
+  border-radius: 10px;
+  background: #f6f6f7;
+
+  color: #111827;
+  font-size: 14px;
+}
+
+/* Price field spans full width */
+
+.ai-field:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+.ai-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+
+  margin-top: 22px;
+}
+
+.ai-features span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #4f7658;
+  font-size: 13px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .listing-studio {
+    width: calc(100% - 24px);
+    padding: 32px 0 60px;
+  }
+
+  .studio-header h1 {
+    font-size: 30px;
+  }
+
+  .studio-progress {
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .progress-line {
+    min-width: 30px;
+  }
+
+  .listing-form,
+  .ai-preview {
+    padding: 22px;
+  }
+
+  .listing-form .form-row,
+  .listing-form .form-row:nth-of-type(3),
+  .ai-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-field:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .uploaded-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .listing-studio {
+    width: calc(100% - 20px);
+    padding-top: 24px;
+  }
+
+  .studio-header h1 {
+    font-size: 27px;
+  }
+
+  .studio-header p {
+    font-size: 14px;
+  }
+
+  .drop-zone {
+    min-height: 190px;
+    padding: 24px 16px;
+  }
+
+  .listing-form,
+  .ai-preview {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .listing-form input,
+  .listing-form select {
+    height: 46px;
+  }
+
+  .listing-form textarea {
+    min-height: 110px;
+  }
+
+  .ai-features {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.ai-spin {
+  animation: ai-spin 1s linear infinite;
+}
+
+@keyframes ai-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

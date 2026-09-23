@@ -1,0 +1,188 @@
+/* ================================
+   Pagination
+================================ */
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  margin-top: 32px;
+  padding: 20px 0;
+}
+
+.pagination-pages {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pagination-button,
+.pagination-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 10px;
+
+  background: var(--card-bg, #ffffff);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.pagination-button:hover:not(:disabled),
+.pagination-number:hover {
+  transform: translateY(-1px);
+}
+
+.pagination-number.active {
+  font-weight: 600;
+}
+
+.pagination-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.pagination-button:focus-visible,
+.pagination-number:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.25);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .pagination {
+    gap: 6px;
+  }
+
+  .pagination-pages {
+    gap: 4px;
+  }
+
+  .pagination-button,
+  .pagination-number {
+    min-width: 36px;
+    height: 36px;
+    padding: 0 8px;
+  }
+
+  .pagination-pages {
+    max-width: 180px;
+    overflow-x: auto;
+  }
+}
+
+/* ================================
+   Load More
+================================ */
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  padding: 10px 0;
+}
+
+.load-more-button {
+  min-width: 220px;
+  min-height: 46px;
+  padding: 11px 22px;
+
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 12px;
+
+  background: var(--card-bg, #ffffff);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.load-more-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.load-more-button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.load-more-button:focus-visible {
+  outline: 3px solid rgba(99, 102, 241, 0.25);
+  outline-offset: 3px;
+}
+
+.all-products-loaded {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 28px;
+  padding: 16px;
+
+  color: var(--text-secondary, #6b7280);
+
+  font-size: 13px;
+}
+
+/* ================================
+   Infinite Scroll
+================================ */
+
+.infinite-scroll-trigger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 80px;
+  margin-top: 20px;
+}
+
+.infinite-scroll-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: var(--text-secondary, #6b7280);
+
+  font-size: 13px;
+}
+
+.infinite-spinner {
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid var(--border-color, #e5e7eb);
+  border-top-color: currentColor;
+
+  border-radius: 50%;
+
+  animation: infinite-spin 0.7s linear infinite;
+}
+
+@keyframes infinite-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

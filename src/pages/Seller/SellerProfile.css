@@ -1,0 +1,290 @@
+/* =========================================================
+   Seller Profile
+   File: src/pages/Seller/SellerProfile.css
+   ========================================================= */
+
+.seller-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 24px 80px;
+}
+
+/* Back link */
+.seller-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 24px;
+  color: #555;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.seller-back:hover {
+  color: #111;
+}
+
+/* Seller profile card */
+.seller-profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #e7e7e7;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+}
+
+.seller-profile-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: 0;
+}
+
+.seller-profile-avatar {
+  width: 96px;
+  height: 96px;
+  flex: 0 0 96px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #f1f1f1;
+  color: #111;
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.seller-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.seller-profile-info h1 {
+  margin: 0 0 8px;
+  color: #111;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.1;
+}
+
+.seller-profile-location,
+.seller-profile-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 6px 0 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.seller-profile-rating svg {
+  color: #111;
+}
+
+.seller-profile-rating strong {
+  color: #111;
+}
+
+/* Message button */
+.seller-message-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.seller-message-button:hover {
+  background: #222;
+  transform: translateY(-1px);
+}
+
+.seller-message-button:active {
+  transform: translateY(0);
+}
+
+/* Seller statistics */
+.seller-profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.seller-profile-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 88px;
+  padding: 20px;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.seller-profile-stat > svg {
+  flex: 0 0 auto;
+  color: #111;
+}
+
+.seller-profile-stat div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.seller-profile-stat strong {
+  color: #111;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.seller-profile-stat span {
+  color: #777;
+  font-size: 13px;
+}
+
+/* Listings section */
+.seller-listings {
+  margin-top: 56px;
+}
+
+.seller-listings .section-header {
+  margin-bottom: 24px;
+}
+
+/* Product grid fallback.
+   ProductGrid already has its own styles, but these help
+   keep the seller page responsive if the grid is generic. */
+.seller-listings .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Empty state */
+.seller-page .empty-state {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.seller-page .empty-state h2,
+.seller-page .empty-state h3 {
+  margin: 0;
+}
+
+.seller-page .empty-state p {
+  margin: 0;
+  color: #666;
+}
+
+.seller-page .empty-state a {
+  margin-top: 10px;
+  color: #111;
+  font-weight: 700;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .seller-profile-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .seller-message-button {
+    width: 100%;
+  }
+
+  .seller-listings .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .seller-page {
+    padding: 24px 16px 60px;
+  }
+
+  .seller-profile-card {
+    padding: 22px;
+    border-radius: 16px;
+  }
+
+  .seller-profile-main {
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .seller-profile-avatar {
+    width: 72px;
+    height: 72px;
+    flex-basis: 72px;
+    font-size: 26px;
+  }
+
+  .seller-profile-info h1 {
+    font-size: 28px;
+  }
+
+  .seller-profile-stats {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .seller-profile-stat {
+    min-height: 72px;
+    padding: 16px;
+  }
+
+  .seller-listings {
+    margin-top: 40px;
+  }
+
+  .seller-listings .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .seller-profile-main {
+    flex-direction: column;
+  }
+
+  .seller-profile-avatar {
+    width: 80px;
+    height: 80px;
+    flex-basis: 80px;
+  }
+
+  .seller-listings .product-grid {
+    grid-template-columns: 1fr;
+  }
+}

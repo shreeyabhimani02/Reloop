@@ -1,0 +1,790 @@
+/* =========================================
+   RELOOP NAVBAR
+========================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+}
+
+/* =========================================
+   NAVBAR INNER
+========================================= */
+
+.navbar-inner {
+  width: 100%;
+  max-width: 1400px;
+  height: 72px;
+
+  margin: 0 auto;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.navbar-logo {
+  flex-shrink: 0;
+
+  color: #111827;
+  text-decoration: none;
+
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+
+  transition: opacity 0.2s ease;
+}
+
+.navbar-logo:hover {
+  opacity: 0.7;
+}
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.navbar-search {
+  position: relative;
+
+  flex: 1;
+  max-width: 620px;
+
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  margin-left: 10px;
+
+  background: #f3f4f6;
+  border: 1px solid transparent;
+  border-radius: 14px;
+
+  color: #6b7280;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.navbar-search:focus-within {
+  background: #ffffff;
+  border-color: #d1d5db;
+
+  box-shadow: 0 0 0 3px rgba(17, 24, 39, 0.05);
+}
+
+.navbar-search svg {
+  flex-shrink: 0;
+
+  margin-left: 17px;
+
+  color: #374151;
+}
+
+.navbar-search input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 18px 0 12px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #111827;
+
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.navbar-search input::placeholder {
+  color: #6b7280;
+}
+
+/* Remove browser search clear styling */
+
+.navbar-search input::-webkit-search-cancel-button {
+  cursor: pointer;
+}
+
+/* =========================================
+   DESKTOP ACTIONS
+========================================= */
+
+.navbar-actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+/* =========================================
+   SELL
+========================================= */
+
+.navbar-sell {
+  height: 42px;
+
+  padding: 0 18px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #111827;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-sell:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.navbar-login {
+  height: 42px;
+
+  padding: 0 13px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border-radius: 10px;
+
+  color: #374151;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: background 0.2s ease;
+}
+
+.navbar-login:hover {
+  background: #f3f4f6;
+}
+
+.navbar-login svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* =========================================
+   SIGN UP
+========================================= */
+
+.navbar-register {
+  height: 42px;
+
+  padding: 0 17px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #111827;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.navbar-register:hover {
+  background: #000000;
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   WISHLIST
+========================================= */
+
+.navbar-icon-button {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #374151;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-icon-button:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.navbar-icon-button svg {
+  width: 21px;
+  height: 21px;
+}
+
+/* =========================================
+   WISHLIST BADGE
+========================================= */
+
+.navbar-badge {
+  position: absolute;
+
+  top: -2px;
+  right: -1px;
+
+  min-width: 19px;
+  height: 19px;
+
+  padding: 0 4px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+
+  background: #111827;
+  color: #ffffff;
+
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* =========================================
+   USER PROFILE
+========================================= */
+
+.navbar-user {
+  height: 42px;
+
+  padding: 3px 10px 3px 4px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border-radius: 999px;
+
+  color: #111827;
+  text-decoration: none;
+
+  transition: background 0.2s ease;
+}
+
+.navbar-user:hover {
+  background: #f3f4f6;
+}
+
+.navbar-user-icon {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.navbar-user-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.navbar-user-name {
+  max-width: 120px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.navbar-logout {
+  height: 42px;
+
+  padding: 0 12px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #6b7280;
+
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-logout:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.navbar-logout svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.navbar-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #111827;
+
+  cursor: pointer;
+}
+
+.navbar-menu-button:hover {
+  background: #f3f4f6;
+}
+
+/* =========================================
+   MOBILE MENU
+========================================= */
+
+.navbar-mobile-menu {
+  width: 100%;
+
+  padding: 14px 20px 20px;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid #f0f0f0;
+
+  background: #ffffff;
+}
+
+/* =========================================
+   MOBILE SEARCH
+========================================= */
+
+.navbar-mobile-search {
+  width: 100%;
+  height: 46px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  background: #f9fafb;
+
+  color: #6b7280;
+}
+
+.navbar-mobile-search svg {
+  flex-shrink: 0;
+
+  margin-left: 14px;
+}
+
+.navbar-mobile-search input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 14px 0 10px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #111827;
+
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.navbar-mobile-search input::placeholder {
+  color: #6b7280;
+}
+
+/* =========================================
+   MOBILE MENU ITEMS
+========================================= */
+
+.navbar-mobile-menu > a,
+.navbar-mobile-menu > button {
+  width: 100%;
+  min-height: 46px;
+
+  padding: 0 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #374151;
+
+  text-decoration: none;
+  text-align: left;
+
+  font-size: 15px;
+  font-weight: 500;
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+.navbar-mobile-menu > a:hover,
+.navbar-mobile-menu > button:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+/* Wishlist count */
+
+.navbar-mobile-menu > a span {
+  margin-left: auto;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .navbar-inner {
+    gap: 18px;
+    padding: 0 20px;
+  }
+
+  .navbar-search {
+    max-width: 480px;
+  }
+
+  .navbar-user-name {
+    display: none;
+  }
+
+  .navbar-user {
+    padding-right: 4px;
+  }
+
+  .navbar-logout {
+    padding: 0 8px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 760px) {
+  .navbar-inner {
+    height: 64px;
+
+    padding: 0 16px;
+
+    gap: 12px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .navbar-search {
+    flex: 1;
+
+    height: 42px;
+
+    margin-left: 0;
+
+    max-width: none;
+  }
+
+  .navbar-search svg {
+    margin-left: 13px;
+  }
+
+  .navbar-search input {
+    padding-left: 9px;
+
+    font-size: 14px;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .navbar-menu-button {
+    display: flex;
+
+    flex-shrink: 0;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .navbar-inner {
+    padding: 0 12px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+  .navbar-search {
+    height: 40px;
+  }
+
+  .navbar-search input {
+    font-size: 13px;
+  }
+}
+
+.navbar-notification-wrapper {
+  position: relative;
+}
+
+.navbar-icon-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.navbar-icon-button:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.notification-badge {
+  position: absolute;
+  top: -2px;
+  right: -3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  border: 2px solid white;
+  border-radius: 999px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Search Autocomplete                                                        */
+/* -------------------------------------------------------------------------- */
+
+.navbar-search-wrapper {
+  position: relative;
+  flex: 1;
+  max-width: 520px;
+}
+
+.navbar-search-wrapper .navbar-search {
+  width: 100%;
+}
+
+.search-suggestions {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+}
+
+.search-suggestion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px 16px;
+
+  border: none;
+  background: transparent;
+
+  color: #1f2937;
+  font-size: 14px;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.search-suggestion:hover {
+  background: #f5f5f5;
+}
+
+.search-suggestion svg {
+  flex-shrink: 0;
+  color: #6b7280;
+}
+
+.search-suggestion span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-suggestion-loading,
+.search-suggestion-empty {
+  padding: 14px 16px;
+
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.navbar-mobile-search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.navbar-mobile-search-wrapper
+  .navbar-mobile-search {
+  width: 100%;
+}
+
+.mobile-search-suggestions {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  max-height: 280px;
+  overflow-y: auto;
+}
